@@ -1,5 +1,7 @@
 # MindScape 📔
 
+**Link:** [MindScape](https://cristiancarter.github.io/MindScape/)
+
 **MindScape** is an interactive, customizable journal application designed to help you capture your thoughts, feelings, and experiences in a serene and personalized environment.
 
 ## Features
