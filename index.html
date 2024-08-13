@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindScape</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+   
+    <div class="container">
+        <header>
+            <h1>MindScape 📔</h1>
+            <label class="toggle-switch">
+                <input type="checkbox" id="darkModeToggle" ${localStorage.getItem('darkMode') === 'true' ? 'checked' : ''}>
+                <span class="slider"></span>
+            </label>
+        </header>
+        <div class="journal-list" id="journalList"></div>
+    </div>
+
+    <div id="locationModal" class="modal">
+        <div class="modal-content">
+            <h2>Where do you want to write?</h2>
+            <div class="location-select">
+                <div class="location-option" data-location="cabin">Cozy winter cabin</div>
+                <div class="location-option" data-location="field">Nature</div>
+                <div class="location-option" data-location="beach">Exotic beach</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="journalModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="journal-page" id="journalPage" contenteditable="true"></div>
+        </div>
+    </div>
+
+    <div id="contextMenu" class="context-menu">
+        <button id="feelingPrompt">Today I feel...</button>
+        <button id="gratitudePrompt">Today I'm grateful for...</button>
+    </div>
+
+    <div id="formattingModal" class="formatting-modal">
+        <button id="headingBtn">Heading</button>
+        <button id="boldBtn">Bold</button>
+        <button id="italicBtn">Italic</button>
+        <button id="paragraphBtn">Paragraph</button>
+        <button id="blockBtn">Block</button>
+    </div>
+    
+    <div id="pageContextMenu" class="context-menu">
+        <button id="pinPageBtn">Pin to Top</button>
+        <button id="deletePageBtn">Delete Page</button>
+    </div>
+</body>
+</html>
